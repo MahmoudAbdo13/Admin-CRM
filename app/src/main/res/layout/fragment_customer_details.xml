@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.customerDetails.CustomerDetailsFragment">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:drawablePadding="6dp"
+        android:layout_marginTop="32dp"
+        app:drawableStartCompat="@drawable/ic_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Customer Name" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:drawablePadding="6dp"
+        app:drawableStartCompat="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:text="01234567890" />
+
+    <TextView
+        android:id="@+id/email_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_email"
+        android:drawablePadding="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        tools:text="customer@gmail.com" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:drawablePadding="6dp"
+        app:drawableStartCompat="@drawable/ic_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_address"
+        tools:text="alsalam - cairo - egypt" />
+    <TextView
+        android:id="@+id/time_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:drawablePadding="6dp"
+        app:drawableStartCompat="@drawable/ic_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address"
+        tools:text="des 1 2022" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/call_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:text="Call"
+        android:ems="6"
+        android:padding="0dp"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/visit_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_added" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/visit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:background="@drawable/button_bg"
+        android:ems="6"
+        android:text="Visit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toStartOf="@id/follow_btn"
+        app:layout_constraintStart_toEndOf="@id/call_btn"
+        app:layout_constraintTop_toTopOf="@+id/call_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/follow_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:background="@drawable/button_bg"
+        android:ems="6"
+        android:text="Follow"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/visit_btn"
+        app:layout_constraintTop_toTopOf="@+id/visit_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/more_details_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@drawable/button_bg"
+        android:ems="12"
+        android:text="More Details"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/visit_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

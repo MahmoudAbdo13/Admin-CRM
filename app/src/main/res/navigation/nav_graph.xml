@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/customersFragment">
+
+    <fragment
+        android:id="@+id/customersFragment"
+        android:name="com.brokerageInsurance.admincrm.ui.customer.CustomersFragment"
+        android:label="Customers"
+        tools:layout="@layout/fragment_customers" >
+        <action
+            android:id="@+id/action_customersFragment_to_customerDetailsFragment"
+            app:destination="@id/customerDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_customersFragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/customerDetailsFragment"
+        android:name="com.brokerageInsurance.admincrm.ui.customerDetails.CustomerDetailsFragment"
+        android:label="Customer Details"
+        tools:layout="@layout/fragment_customer_details" >
+        <action
+            android:id="@+id/action_customerDetailsFragment_to_moreDetailsFragment"
+            app:destination="@id/moreDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="customer"
+            app:argType="com.brokerageInsurance.admincrm.data.Customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreDetailsFragment"
+        android:name="com.brokerageInsurance.admincrm.ui.moreDetails.MoreDetailsFragment"
+        android:label="More Details"
+        tools:layout="@layout/fragment_more_details" >
+        <action
+            android:id="@+id/action_moreDetailsFragment_to_customersFragment"
+            app:destination="@id/customersFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/customersFragment"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="uId"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.brokerageInsurance.admincrm.ui.addCustomer.AddFragment"
+        android:label="AddFragment" />
+</navigation>

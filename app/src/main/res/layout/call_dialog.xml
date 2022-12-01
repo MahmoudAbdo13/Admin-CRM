@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/transperent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/light_gray_border"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Add Call Result"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/call_length"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/light_gray_border"
+            android:elevation="6dp"
+            android:gravity="start|top"
+            android:hint="enter call duration"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/call_result"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/light_gray_border"
+            android:elevation="6dp"
+            android:gravity="top"
+            android:hint="enter call result"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:elevation="8dp"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+        <Button
+            android:id="@+id/add_call_btn"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/button_bg"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingVertical="0dp"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:paddingVertical="0dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/cancel_bg"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
