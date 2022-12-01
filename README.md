@@ -3,9 +3,9 @@ Brokerage-Insurance Company Task
 
 # Features and Tools
 
-MVVM Arch
-
 LiveData
+
+MVVM Arch
 
 View Binding
 
