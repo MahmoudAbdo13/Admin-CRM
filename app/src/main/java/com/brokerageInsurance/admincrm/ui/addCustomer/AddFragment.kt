@@ -59,6 +59,10 @@ class AddFragment : Fragment(R.layout.fragment_add_customer) {
                 createdMessage.isVisible = true
                 binding.root.setOnClickListener {
                     createdMessage.isVisible = false
+                    name.text.clear()
+                    emailAddress.text.clear()
+                    address.text.clear()
+                    phone.text.clear()
                 }
             }
         }
